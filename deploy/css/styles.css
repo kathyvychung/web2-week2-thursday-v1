@@ -388,7 +388,14 @@ header {
     Footer
 ============= */
 footer {
-  background-color: #82a97c; }
+  background-color: #82a97c;
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 10px auto 10px;
+  grid-template-areas: ". footer ."; }
+  footer > div {
+    grid-area: footer;
+    text-align: right; }
 
 /* =============
     Section 1
@@ -424,7 +431,7 @@ footer {
   #section-3 > ul {
     grid-area: section-3;
     display: grid;
-    grid-gap: 50px; }
+    grid-gap: 20px; }
 
 /* =============
     Section 4
