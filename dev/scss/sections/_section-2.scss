@@ -1,0 +1,16 @@
+/* =============
+    Section 2
+============= */
+#section-2{
+    
+    display: grid;
+    grid-template-columns: 10px auto 10px;
+    grid-template-areas: ". section-2 .";
+
+    >div{
+        grid-area: section-2;
+
+    }
+    padding: 50px 0;
+    text-align: center;
+}
