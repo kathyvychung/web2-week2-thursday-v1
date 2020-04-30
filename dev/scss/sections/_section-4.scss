@@ -2,6 +2,9 @@
     Section 4
 ============= */
 #section-4{
+    img {
+        width: 20%;
+    }
     display: grid;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section-4 .";

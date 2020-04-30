@@ -49,7 +49,7 @@
 		"oAP": "/deploy/images/coffee-maker.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/deploy/images/hero.jpg": {
@@ -74,9 +74,9 @@
 		"opt": 0,
 		"q": 100
 		},
-	"/deploy/images/shovel.jpeg": {
+	"/deploy/images/shovel.jpg": {
 		"ft": 16384,
-		"iS": 57008,
+		"iS": 73774,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/deploy/images/shovel.jpg",

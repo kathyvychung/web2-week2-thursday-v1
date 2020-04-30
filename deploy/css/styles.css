@@ -383,6 +383,8 @@ textarea {
 header {
   padding: 50px 0;
   text-align: center; }
+  header img {
+    width: 100%; }
 
 /* =============
     Footer
@@ -400,14 +402,35 @@ footer {
 /* =============
     Section 1
 ============= */
-#section-1 {
+@media (min-width: 1200px) {
+  #section-1 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". section-3 ."; } }
+
+@media (min-width: 992px) {
+  #section-1 > div {
+    display: grid;
+    grid-template-columns: 40% auto; } }
+
+@media (min-width: 1200px) {
+  #section-1 > div {
+    grid-area: section-3;
+    padding: 50px 0;
+    text-align: center; } }
+
+#section-1 > div aside img {
+  widows: 100%; }
+
+#section-1 > div section {
   display: grid;
   grid-template-columns: 10px auto 10px;
-  grid-template-areas: ". section-1 .";
-  padding: 50px 0;
-  text-align: center; }
-  #section-1 > div {
-    grid-area: section-1; }
+  grid-template-areas: ". section-1-inside ."; }
+  @media (min-width: 768px) {
+    #section-1 > div section {
+      grid-template-columns: 10% auto 10%; } }
+  #section-1 > div section > div {
+    grid-area: section-1-inside; }
 
 /* =============
     Section 2
@@ -418,6 +441,8 @@ footer {
   grid-template-areas: ". section-2 .";
   padding: 50px 0;
   text-align: center; }
+  #section-2 img {
+    width: 100%; }
   #section-2 > div {
     grid-area: section-2; }
 
@@ -428,11 +453,43 @@ footer {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". section-3 ."; }
+  @media (min-width: 1200px) {
+    #section-3 {
+      grid-template-columns: auto 1200px auto; } }
   #section-3 > ul {
     grid-area: section-3;
     display: grid;
-    grid-gap: 20px; }
-
+    grid-gap: 20px;
+    grid-template-rows: repeat(2, 500px); }
+    @media (min-width: 768px) {
+      #section-3 > ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "gallery-1 gallery-1" "gallery-2 gallery-3"; } }
+    @media (min-width: 992px) {
+      #section-3 > ul {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "gallery-1 gallery-2" "gallery-1 gallery-3"; } }
+    #section-3 > ul li {
+      background-size: cover;
+      height: 100%; }
+    #section-3 > ul #gallery-1 {
+      background-repeat: no-repeat;
+      background-image: url("../images/coffee-maker.jpg"); }
+      @media (min-width: 768px) {
+        #section-3 > ul #gallery-1 {
+          grid-area: gallery-1; } }
+    #section-3 > ul #gallery-2 {
+      background-repeat: no-repeat;
+      background-image: url("../images/shovel.jpg"); }
+      @media (min-width: 768px) {
+        #section-3 > ul #gallery-2 {
+          grid-area: gallery-2; } }
+    #section-3 > ul #gallery-3 {
+      background-repeat: no-repeat;
+      background-image: url("../images/coffee-beans.jpg"); }
+      @media (min-width: 768px) {
+        #section-3 > ul #gallery-3 {
+          grid-area: gallery-3; } }
 /* =============
     Section 4
 ============= */
@@ -440,6 +497,8 @@ footer {
   display: grid;
   grid-template-columns: 10px auto 10px;
   grid-template-areas: ". section-4 ."; }
+  #section-4 img {
+    width: 20%; }
   #section-4 > div {
     grid-area: section-4;
     padding: 50px 0;
