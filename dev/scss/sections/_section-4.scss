@@ -2,6 +2,15 @@
     Section 4
 ============= */
 #section-4{
+    >div{
+        background-image: url('../images/circle-mask.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-left: 50px;
+        grid-area: section-4;
+        height: 400px;
+        padding-top: 50px;
+    }
     img {
         width: 20%;
     }
@@ -9,9 +18,12 @@
     grid-template-columns: 15px auto 15px;
     grid-template-areas: ". section-4 .";
 
-    >div{
+    >section{
         grid-area: section-4;
-        padding: 50px 0;
+        padding: 0px 0;
+        padding-top: 425px;
+        padding-bottom: 50px;
+        margin-left: 15px;
         text-align: center;
     }
 }
