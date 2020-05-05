@@ -2,23 +2,23 @@
     Section 3
 ============= */
 #section-3{
-    display: grid;
-    grid-template-columns: 10px auto 10px;
-    grid-template-areas: ". section-3 .";
+    #section-3-gallery{
 
-    @include xl {
-        grid-template-columns: auto 1200px auto;
-    }
+        .container{
+            display: grid;
+            height: 100%;
+            grid-gap: 20px;
+            grid-template-columns: repeat(2, 500px);
+            grid-template-rows: repeat(2, 500px);
+            grid-template-areas:
+                "gallery-1"
+                "gallery-2"
+                "gallery-3"
+        }
 
-    >ul{
-        grid-area: section-3;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-rows: repeat(2, 500px);
 
         @include md {
             grid-template-columns: repeat(2, 1fr);
-            
             grid-template-areas:
                 "gallery-1 gallery-1"
                 "gallery-2 gallery-3";       
@@ -32,14 +32,17 @@
                 "gallery-1 gallery-3";
         }
 
-        li {
-            background-size: cover;
-            height: 100%;
+        @include xl {
+            grid-template-columns: auto 1200px auto;
         }
 
+    }
+        li {
+        background-size: cover;
+        width: 320px;
+        }
         #gallery-1{
-            background-repeat: no-repeat;
-            background-image: url('../images/coffee-maker.jpg');
+            // background-image: url('../images/coffee-maker.jpg');
             @include md {
                 grid-area: gallery-1;
             }
@@ -47,17 +50,16 @@
 
         #gallery-2{
             background-repeat: no-repeat;
-            background-image: url('../images/shovel.jpg');
+            // background-image: url('../images/shovel.jpg');
             @include md {
                 grid-area: gallery-2;
             }
         }
         #gallery-3{
             background-repeat: no-repeat;
-            background-image: url('../images/coffee-beans.jpg');
+            // background-image: url('../images/coffee-beans.jpg');
             @include md {
                 grid-area: gallery-3;
             }
-        }
-    }   
+         }   
 }

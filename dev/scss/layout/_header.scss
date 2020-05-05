@@ -2,9 +2,18 @@
     Header
 ============= */
 header {
-    img {
-        width: 100%;
-    }
-    padding: 50px 0;
-    text-align: center;
-}
+   section{
+       background-image: url('../images/hero.jpg');
+       background-size:cover;
+       background-position: center;
+       height: 360px;
+
+       @include md {
+           height: 670px;
+       }
+
+        padding: 50px 0;
+        text-align: center;
+        color: $white;
+    }   
+} 

@@ -1,5 +1,5 @@
 /* =============
-    Section 1
+    Section-3
 ============= */
 #section-1{
     @include xl {
@@ -7,36 +7,45 @@
         grid-template-columns: auto 1200px auto;
         grid-template-areas: ". section-3 .";
     }
+
     >div {
         @include lg {
             display: grid;
-            grid-template-columns: 40% auto;
+            grid-template-columns: 50% auto;
+            height: 700px;
         }
         @include xl {
             grid-area: section-3;
-            padding: 50px 0;
-            text-align: center;
         } 
-        aside {
-            img{
-                widows: 100%;
-            }
-        }
-        section {
-            display: grid;
-            grid-template-columns: 10px auto 10px;
-            grid-template-areas: ". section-1-inside .";
+    }
+    padding: 20px;
+    aside {
+        background-image: url('../images/stairs.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 600px;
 
             @include md {
                 grid-template-columns: 10% auto 10%;
-            }
-
-            >div {
-                grid-area: section-1-inside;
+                height: 700px;
             }
 
         }
 
+    section {
+        display: grid;
+        grid-template-columns: 10px auto 10px;
+        grid-template-areas: ". section-1 .";
+
+        @include md {
+            grid-template-columns: 10% auto 10%;
+            }
+
+            >div {
+                grid-area: section-1;
+                text-align: center;
+            }
+
     }
-    
+
 }
