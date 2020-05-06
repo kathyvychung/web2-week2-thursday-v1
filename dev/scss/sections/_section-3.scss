@@ -2,64 +2,80 @@
     Section 3
 ============= */
 #section-3{
-    #section-3-gallery{
 
-        .container{
-            display: grid;
-            height: 100%;
-            grid-gap: 20px;
-            grid-template-columns: repeat(2, 500px);
-            grid-template-rows: repeat(2, 500px);
-            grid-template-areas:
-                "gallery-1"
-                "gallery-2"
-                "gallery-3"
-        }
+    @include xl{
+        display:grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-3 ."
+    }
 
+
+    ul{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-areas: repeat (2, 300px);
 
         @include md {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-template-areas:
                 "gallery-1 gallery-1"
-                "gallery-2 gallery-3";       
-        }
+                "gallery-2 gallery-3";
+        }  
 
-        @include lg {
-            grid-template-columns: repeat(2, 1fr);
-
+        @include xl {
+            grid-template-columns: auto 60% auto;
+            grid-gap: 20px;
             grid-template-areas:
                 "gallery-1 gallery-2"
                 "gallery-1 gallery-3";
         }
 
-        @include xl {
-            grid-template-columns: auto 1200px auto;
-        }
-
-    }
         li {
         background-size: cover;
-        width: 320px;
+        background-position: center;
         }
+
         #gallery-1{
-            // background-image: url('../images/coffee-maker.jpg');
+            background-image: url('../images/coffee-maker.jpg');
+            height: 600px;
+
             @include md {
                 grid-area: gallery-1;
+                background-position: center top;
+                height: 900px; 
+            }
+
+            @include xl {
+                grid-area: gallery-1;
+                // background-position: right;
+                width: 700px;  
             }
         }
 
         #gallery-2{
-            background-repeat: no-repeat;
-            // background-image: url('../images/shovel.jpg');
+            background-image: url('../images/shovel.jpg');
+            height: 425px;
+            
             @include md {
                 grid-area: gallery-2;
             }
+            @include xl {
+                grid-area: gallery-2;
+                background-position: center;
+                width: 600px;
+            }
         }
         #gallery-3{
-            background-repeat: no-repeat;
-            // background-image: url('../images/coffee-beans.jpg');
+            background-image: url('../images/coffee-beans.jpg');
+            height: 425px;
             @include md {
                 grid-area: gallery-3;
             }
-         }   
+            @include xl {
+                grid-area: gallery-3;
+                background-position: center;
+                width: 600px;
+            } 
+        }   
+    }
 }

@@ -3,21 +3,21 @@
 ============= */
 #section-2{
     aside{
-
-        display: grid;
-        grid-template-columns: 15px auto 15px;
-        grid-template-areas: ". section-2 .";
         background-image: url('../images/plant-coffee.jpg');
         background-size: cover;
         background-position: center;
         height: 320px;
         
         @include md {
-            height: 770px;
+            height: 575px;
+        }
+
+        @include lg {
+            height: 625px;
         }
 
         @include xl {
-            height: 1000
+            height: 700px;
         }
     }
     #section-2-center{
@@ -28,7 +28,8 @@
         color: $matcha;
 
             #section-2-content{
-                grid-area: section-4;
+                grid-area: section-2-center;
+                text-align: center;
             }
 
     }

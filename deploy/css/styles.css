@@ -384,13 +384,14 @@ header section {
   background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
-  height: 360px;
+  background-repeat: no-repeat;
+  height: 240px;
   padding: 50px 0;
   text-align: center;
   color: #fff; }
   @media (min-width: 768px) {
     header section {
-      height: 670px; } }
+      height: 510px; } }
 /* =============
     Footer
 ============= */
@@ -402,10 +403,11 @@ footer {
   grid-template-areas: ". footer ."; }
   footer > div {
     grid-area: footer;
-    text-align: right; }
+    text-align: right;
+    color: #fff; }
 
 /* =============
-    Section-3
+    Section-1
 ============= */
 #section-1 {
   padding: 20px; }
@@ -433,6 +435,7 @@ footer {
         height: 700px; } }
   #section-1 section {
     display: grid;
+    padding-top: 20px;
     grid-template-columns: 10px auto 10px;
     grid-template-areas: ". section-1 ."; }
     @media (min-width: 768px) {
@@ -446,19 +449,19 @@ footer {
     Section 2
 ============= */
 #section-2 aside {
-  display: grid;
-  grid-template-columns: 15px auto 15px;
-  grid-template-areas: ". section-2 .";
   background-image: url("../images/plant-coffee.jpg");
   background-size: cover;
   background-position: center;
   height: 320px; }
   @media (min-width: 768px) {
     #section-2 aside {
-      height: 770px; } }
+      height: 575px; } }
+  @media (min-width: 992px) {
+    #section-2 aside {
+      height: 625px; } }
   @media (min-width: 1200px) {
     #section-2 aside {
-      height: 1000; } }
+      height: 700px; } }
 #section-2 #section-2-center {
   padding: 20px;
   display: grid;
@@ -466,51 +469,68 @@ footer {
   grid-template-areas: ". section-2-center .";
   color: #819386; }
   #section-2 #section-2-center #section-2-content {
-    grid-area: section-4; }
+    grid-area: section-2-center;
+    text-align: center; }
 
 /* =============
     Section 3
 ============= */
-#section-3 #section-3-gallery .container {
-  display: grid;
-  height: 100%;
-  grid-gap: 20px;
-  grid-template-columns: repeat(2, 500px);
-  grid-template-rows: repeat(2, 500px);
-  grid-template-areas: "gallery-1" "gallery-2" "gallery-3"; }
-
-@media (min-width: 768px) {
-  #section-3 #section-3-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "gallery-1 gallery-1" "gallery-2 gallery-3"; } }
-
-@media (min-width: 992px) {
-  #section-3 #section-3-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "gallery-1 gallery-2" "gallery-1 gallery-3"; } }
-
 @media (min-width: 1200px) {
-  #section-3 #section-3-gallery {
-    grid-template-columns: auto 1200px auto; } }
+  #section-3 {
+    display: grid;
+    grid-template-columns: auto 1200px auto;
+    grid-template-areas: ". section-3 ."; } }
 
-#section-3 li {
-  background-size: cover;
-  width: 320px; }
-
-@media (min-width: 768px) {
-  #section-3 #gallery-1 {
-    grid-area: gallery-1; } }
-
-#section-3 #gallery-2 {
-  background-repeat: no-repeat; }
+#section-3 ul {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: repeat 2, 300px; }
   @media (min-width: 768px) {
-    #section-3 #gallery-2 {
-      grid-area: gallery-2; } }
-#section-3 #gallery-3 {
-  background-repeat: no-repeat; }
-  @media (min-width: 768px) {
-    #section-3 #gallery-3 {
-      grid-area: gallery-3; } }
+    #section-3 ul {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "gallery-1 gallery-1" "gallery-2 gallery-3"; } }
+  @media (min-width: 1200px) {
+    #section-3 ul {
+      grid-template-columns: auto 60% auto;
+      grid-gap: 20px;
+      grid-template-areas: "gallery-1 gallery-2" "gallery-1 gallery-3"; } }
+  #section-3 ul li {
+    background-size: cover;
+    background-position: center; }
+  #section-3 ul #gallery-1 {
+    background-image: url("../images/coffee-maker.jpg");
+    height: 600px; }
+    @media (min-width: 768px) {
+      #section-3 ul #gallery-1 {
+        grid-area: gallery-1;
+        background-position: center top;
+        height: 900px; } }
+    @media (min-width: 1200px) {
+      #section-3 ul #gallery-1 {
+        grid-area: gallery-1;
+        width: 700px; } }
+  #section-3 ul #gallery-2 {
+    background-image: url("../images/shovel.jpg");
+    height: 425px; }
+    @media (min-width: 768px) {
+      #section-3 ul #gallery-2 {
+        grid-area: gallery-2; } }
+    @media (min-width: 1200px) {
+      #section-3 ul #gallery-2 {
+        grid-area: gallery-2;
+        background-position: center;
+        width: 600px; } }
+  #section-3 ul #gallery-3 {
+    background-image: url("../images/coffee-beans.jpg");
+    height: 425px; }
+    @media (min-width: 768px) {
+      #section-3 ul #gallery-3 {
+        grid-area: gallery-3; } }
+    @media (min-width: 1200px) {
+      #section-3 ul #gallery-3 {
+        grid-area: gallery-3;
+        background-position: center;
+        width: 600px; } }
 /* =============
     Section 4
 ============= */

@@ -6,10 +6,11 @@ header {
        background-image: url('../images/hero.jpg');
        background-size:cover;
        background-position: center;
-       height: 360px;
+       background-repeat:no-repeat;
+       height: 240px;
 
        @include md {
-           height: 670px;
+           height: 510px
        }
 
         padding: 50px 0;

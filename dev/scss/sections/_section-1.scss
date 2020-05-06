@@ -1,5 +1,5 @@
 /* =============
-    Section-3
+    Section-1
 ============= */
 #section-1{
     @include xl {
@@ -34,6 +34,7 @@
 
     section {
         display: grid;
+        padding-top: 20px;
         grid-template-columns: 10px auto 10px;
         grid-template-areas: ". section-1 .";
 
