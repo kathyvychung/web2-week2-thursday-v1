@@ -461,9 +461,10 @@ footer {
       height: 625px; } }
   @media (min-width: 1200px) {
     #section-2 aside {
-      height: 700px; } }
+      height: 700px;
+      grid-area: section-2; } }
 #section-2 #section-2-center {
-  padding: 20px;
+  padding: 30px;
   display: grid;
   grid-template-columns: 15px auto 15px;
   grid-template-areas: ". section-2-center .";

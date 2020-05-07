@@ -2,7 +2,12 @@
     Section 2
 ============= */
 #section-2{
-    aside{
+    @include xl{
+        display: grid;
+        grid-template-columns: auto 1200px auto;
+        grid-template-areas: ". section-2 .";
+     }
+    >div{
         background-image: url('../images/plant-coffee.jpg');
         background-size: cover;
         background-position: center;
@@ -18,12 +23,13 @@
 
         @include xl {
             height: 700px;
+            grid-area: section-2;
         }
     }
     #section-2-center{
-        padding: 20px;
+        padding: 30px;
         display: grid;
-        grid-template-columns: 15px auto 15px;
+        grid-template-columns: auto 1200px auto;
         grid-template-areas: ". section-2-center .";
         color: $matcha;
 
