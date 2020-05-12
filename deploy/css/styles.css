@@ -343,15 +343,20 @@ ul {
     Typography
 ============= */
 body {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Poppins', sans-serif; }
+
+h1 {
+  font-family: 'Abril Fatface', cursive; }
 
 h1, h2, h3, h4 {
   margin: 0;
-  padding: 0; }
+  padding: 10px; }
 
 p {
   margin: 0;
-  padding: 0; }
+  padding: 0px;
+  line-height: 1.875rem;
+  font-size: 1.125rem; }
 
 .section-title {
   font-weight: 300; }
@@ -385,7 +390,7 @@ header section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 240px;
+  height: 100px;
   padding: 50px 0;
   text-align: center;
   color: #fff; }
@@ -415,7 +420,7 @@ footer {
     #section-1 {
       display: grid;
       grid-template-columns: auto 1200px auto;
-      grid-template-areas: ". section-3 ."; } }
+      grid-template-areas: ". section-1 ."; } }
   @media (min-width: 992px) {
     #section-1 > div {
       display: grid;
@@ -423,7 +428,7 @@ footer {
       height: 700px; } }
   @media (min-width: 1200px) {
     #section-1 > div {
-      grid-area: section-3; } }
+      grid-area: section-1; } }
   #section-1 aside {
     background-image: url("../images/stairs.jpg");
     background-size: cover;
@@ -448,25 +453,25 @@ footer {
 /* =============
     Section 2
 ============= */
-#section-2 aside {
+#section-2 > div {
   background-image: url("../images/plant-coffee.jpg");
   background-size: cover;
   background-position: center;
   height: 320px; }
   @media (min-width: 768px) {
-    #section-2 aside {
+    #section-2 > div {
       height: 575px; } }
   @media (min-width: 992px) {
-    #section-2 aside {
+    #section-2 > div {
       height: 625px; } }
   @media (min-width: 1200px) {
-    #section-2 aside {
+    #section-2 > div {
       height: 700px;
       grid-area: section-2; } }
 #section-2 #section-2-center {
   padding: 30px;
   display: grid;
-  grid-template-columns: 15px auto 15px;
+  grid-template-columns: auto 1200px auto;
   grid-template-areas: ". section-2-center .";
   color: #819386; }
   #section-2 #section-2-center #section-2-content {
@@ -485,7 +490,7 @@ footer {
 #section-3 ul {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: repeat 2, 300px; }
+  grid-template-areas: section-3; }
   @media (min-width: 768px) {
     #section-3 ul {
       grid-template-rows: repeat(2, 1fr);
@@ -551,8 +556,7 @@ footer {
     width: 20%; }
   #section-4 > section {
     grid-area: section-4;
-    padding: 0px 0;
     padding-top: 425px;
     padding-bottom: 50px;
     margin-left: 15px;
-    text-align: center; }
+    text-align: justify; }
