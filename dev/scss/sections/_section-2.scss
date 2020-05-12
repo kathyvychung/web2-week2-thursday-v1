@@ -4,8 +4,10 @@
 #section-2{
     // @include xl{
     //     display: grid;
-    //     grid-template-columns: auto 1200px auto;
-    //     grid-template-areas: ". section-2 .";
+    //     grid-template-columns: auto 1200x auto;
+    //     grid-template-areas: 
+    //         ". section-2 ."
+    //         ". section-2-center";
     //  }
     >div{
         background-image: url('../images/plant-coffee.jpg');
@@ -15,10 +17,12 @@
         
         @include md {
             height: 575px;
+            grid-area: section-2;
         }
 
         @include lg {
             height: 625px;
+            grid-area: section-2;
         }
 
         @include xl {
@@ -27,9 +31,11 @@
         }
     }
     #section-2-center{
+        grid-area: section-2-center;
         padding: 30px;
         display: grid;
-        grid-template-columns: auto 1200px auto;
+        grid-template-columns: auto 470px auto;
+        text-align: center;
         grid-template-areas: ". section-2-center .";
         color: $matcha;
 

@@ -506,18 +506,22 @@ footer {
   height: 320px; }
   @media (min-width: 768px) {
     #section-2 > div {
-      height: 575px; } }
+      height: 575px;
+      grid-area: section-2; } }
   @media (min-width: 992px) {
     #section-2 > div {
-      height: 625px; } }
+      height: 625px;
+      grid-area: section-2; } }
   @media (min-width: 1200px) {
     #section-2 > div {
       height: 700px;
       grid-area: section-2; } }
 #section-2 #section-2-center {
+  grid-area: section-2-center;
   padding: 30px;
   display: grid;
-  grid-template-columns: auto 1200px auto;
+  grid-template-columns: auto 470px auto;
+  text-align: center;
   grid-template-areas: ". section-2-center .";
   color: #819386; }
   #section-2 #section-2-center #section-2-content {
