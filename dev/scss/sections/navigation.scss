@@ -1,3 +1,37 @@
 /* =============
     Navigation
 ============= */
+#navigation {
+    background-color: $white;
+    opacity: 70%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    >div {
+        display: grid;
+        grid-template-areas: 
+            "logo burger"
+            "nav nav";
+        grid-template-columns: 80% auto;
+
+        #logo-container {
+            grid-area: logo;
+        }
+
+        #burger-container {
+            grid-area: burger;
+        }
+
+        #nav-container {
+            grid-area: nav;
+            display: none;
+        }
+        section {
+            i {
+                color: $matcha;
+            }
+        }
+    }
+}
