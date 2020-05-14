@@ -12,15 +12,16 @@
     >div {
         display: grid;
         grid-template-areas: "logo burger"
-                             "logo nav";
+                             "nav nav";
         grid-template-columns: 80% auto;
 
         @include lg {
-            grid-template-areas: "nav nav"
+            grid-template-areas: "logo nav"
         }
 
         #logo-container {
             grid-area: logo;
+            color: $matcha;
             
         }
 
@@ -28,11 +29,11 @@
             align-items: center;
             grid-area: burger;
             justify-content: flex-end;
-            padding-left: 10px;
+            padding-right: 10px;
             display: flex;
 
             @include lg {
-                display:none;
+                display: none;
             }
 
             i{
@@ -43,8 +44,15 @@
 
         #nav-container {
             grid-area: nav;
+            display: show;
+            background-color: $matcha;
             padding: 10px;
-            display: none;
+
+            @include lg {
+                background-color: $white;
+                padding: 10px;
+                display: block !important;
+            }
         }
         section {
             i {
