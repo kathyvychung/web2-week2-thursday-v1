@@ -11,21 +11,39 @@
 
     >div {
         display: grid;
-        grid-template-areas: 
-            "logo burger"
-            "nav nav";
+        grid-template-areas: "logo burger"
+                             "logo nav";
         grid-template-columns: 80% auto;
+
+        @include lg {
+            grid-template-areas: "nav nav"
+        }
 
         #logo-container {
             grid-area: logo;
+            
         }
 
         #burger-container {
+            align-items: center;
             grid-area: burger;
+            justify-content: flex-end;
+            padding-left: 10px;
+            display: flex;
+
+            @include lg {
+                display:none;
+            }
+
+            i{
+                cursor: pointer;
+                font-size: rem-calc(30);
+            }
         }
 
         #nav-container {
             grid-area: nav;
+            padding: 10px;
             display: none;
         }
         section {
